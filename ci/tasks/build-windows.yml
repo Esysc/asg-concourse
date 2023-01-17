@@ -1,0 +1,7 @@
+---
+platform: windows
+
+run:
+  path: powershell
+  args:
+    - repo.git/ci/tasks/build-windows.ps1

@@ -1,3 +1,4 @@
+resources:
 - name: repo.git
   type: git
   icon: git
@@ -6,6 +7,7 @@
     branch: master
 
 
+jobs:
 - name: build-windows
   plan:
   - get: repo.git
