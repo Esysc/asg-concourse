@@ -1,0 +1,36 @@
+- name: repo.git
+  type: git
+  icon: git
+  source:
+    uri: git@github.com:Esysc/asg-concourse.git
+    branch: master
+
+
+- name: build-windows
+  plan:
+  - get: repo.git
+    trigger: false
+  - in_parallel:
+    - task: build-windows-1
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
+
+    - task: build-windows-2
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
+
+    - task: build-windows-3
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
+
+    - task: build-windows-4
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
+
+    - task: build-windows-5
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
+
+    - task: build-windows-6
+      tags: [vs2019]
+      file: repo.git/ci/tasks/build-windows.yml
