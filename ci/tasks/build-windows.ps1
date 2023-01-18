@@ -1,10 +1,10 @@
 $ErrorActionPreference = "Stop"
 
 Get-Date
-Write-Host "Sleeping for 7 minutes..."
+Write-Host "Sleeping for 10 minutes..."
 
-# 420s = 7m
-Start-Sleep -Seconds 420
+# 600s = 10m
+Start-Sleep -Seconds 600
 
 Get-Date
-Write-Host "Job is ended after 7 minutes!"
+Write-Host "Job is ended after 10  minutes!"
